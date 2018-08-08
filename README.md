@@ -1,3 +1,3 @@
 # maxz
 Maxz
-https://github.com/Namemai/m
+https://github.com/0954517662/maxz
