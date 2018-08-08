@@ -77,8 +77,8 @@ def sendMessageWithMention(to, mid):
 def helpmessage():
     helpMessage = "╔═══════════════════" + "\n" + \
                   "╠❂͜͡☬➣【さัএπัஞ✵ບิथℓℓҨतΩ】" + "\n" + \
-                  "╠❂͜͡☬➣〘 Help 〙⭕═══════" + "\n" + \
-                  "╠❂͜͡☬➣ Help" + "\n" + \
+                  "╠❂͜͡☬➣〘 HELP 〙⭕═══════" + "\n" + \
+                  "╠❂͜͡☬➣ คำสั่ง" + "\n" + \
                   "╠❂͜͡☬➣ Translate" + "\n" + \
                   "╠❂͜͡☬➣ Texttospeech" + "\n" + \
                   "╠❂͜͡☬➣〘 Status 〙⭕══════" + "\n" + \
@@ -97,20 +97,20 @@ def helpmessage():
                   "╠❂͜͡☬➣ DetectMention「On/Off」" + "\n" + \
                   "╠═══════════════════" + "\n" + \
                   "╠❂͜͡☬➣〘 Self 〙⭕═══════" + "\n" + \
-                  "╠❂͜͡☬➣ Me" + "\n" + \
-                  "╠❂͜͡☬➣ MyMid" + "\n" + \
-                  "╠❂͜͡☬➣ MyName" + "\n" + \
-                  "╠❂͜͡☬➣ MyBio" + "\n" + \
-                  "╠❂͜͡☬➣ MyPicture" + "\n" + \
-                  "╠❂͜͡☬➣ MyVideoProfile" + "\n" + \
-                  "╠❂͜͡☬➣ MyCover" + "\n" + \
-                  "╠❂͜͡☬➣ StealContact「Mention」" + "\n" + \
-                  "╠❂͜͡☬➣ StealMid「Mention」" + "\n" + \
-                  "╠❂͜͡☬➣ StealName「Mention」" + "\n" + \
-                  "╠❂͜͡☬➣ StealBio「Mention」" + "\n" + \
-                  "╠❂͜͡☬➣ StealPicture「Mention」" + "\n" + \
-                  "╠❂͜͡☬➣ StealVideoProfile「Mention」" + "\n" + \
-                  "╠❂͜͡☬➣ StealCover「Mention」" + "\n" + \
+                  "╠❂͜͡☬➣ คท" + "\n" + \
+                  "╠❂͜͡☬➣ ไอดี" + "\n" + \
+                  "╠❂͜͡☬➣ ชื่อ" + "\n" + \
+                  "╠❂͜͡☬➣ ตัส" + "\n" + \
+                  "╠❂͜͡☬➣ รูป" + "\n" + \
+                  "╠❂͜͡☬➣ วิดีโอ" + "\n" + \
+                  "╠❂͜͡☬➣ ปก" + "\n" + \
+                  "╠❂͜͡☬➣ คท「Mention」" + "\n" + \
+                  "╠❂͜͡☬➣ ไอดี「Mention」" + "\n" + \
+                  "╠❂͜͡☬➣ ชื่อ「Mention」" + "\n" + \
+                  "╠❂͜͡☬➣ ตัส「Mention」" + "\n" + \
+                  "╠❂͜͡☬➣ รูป「Mention」" + "\n" + \
+                  "╠❂͜͡☬➣ วิดีโอ「Mention」" + "\n" + \
+                  "╠❂͜͡☬➣ ปก「Mention」" + "\n" + \
                   "╠❂͜͡☬➣ CloneProfile「Mention」" + "\n" + \
                   "╠❂͜͡☬➣ RestoreProfile" + "\n" + \
                   "╠═══════════════════" + "\n" + \
@@ -359,7 +359,7 @@ def lineBot(op):
                 if text is None:
                     return
 #==============================================================================#
-                if text.lower() == 'help':
+                if text.lower() == 'คำสั่ง':
                     helpMessage = helpmessage()
                     arif.sendMessage(to, str(helpMessage))
                     arif.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
@@ -466,28 +466,28 @@ def lineBot(op):
                     settings["copy"] = True
                     arif.sendMessage(to, "Kirim Contact Yang Mau Di Copy")
 #==============================================================================#
-                elif text.lower() == 'me':
+                elif text.lower() == 'คท':
                     sendMessageWithMention(to, arifMID)
                     arif.sendContact(to, arifMID)
-                elif text.lower() == 'mymid':
+                elif text.lower() == 'ไอดี':
                     arif.sendMessage(msg.to,"[MID]\n" +  arifMID)
-                elif text.lower() == 'myname':
+                elif text.lower() == 'ชื่อ':
                     me = arif.getContact(arifMID)
                     arif.sendMessage(msg.to,"[DisplayName]\n" + me.displayName)
-                elif text.lower() == 'mybio':
+                elif text.lower() == 'ตัส':
                     me = arif.getContact(arifMID)
                     arif.sendMessage(msg.to,"[StatusMessage]\n" + me.statusMessage)
-                elif text.lower() == 'mypicture':
+                elif text.lower() == 'รูป':
                     me = arif.getContact(arifMID)
                     arif.sendImageWithURL(msg.to,"http://dl.profile.line-cdn.net/" + me.pictureStatus)
-                elif text.lower() == 'myvideoprofile':
+                elif text.lower() == 'วิดีโอ':
                     me = arif.getContact(arifMID)
                     arif.sendVideoWithURL(msg.to,"http://dl.profile.line-cdn.net/" + me.pictureStatus + "/vp")
-                elif text.lower() == 'mycover':
+                elif text.lower() == 'ปก':
                     me = arif.getContact(arifMID)
                     cover = arif.getProfileCoverURL(arifMID)    
                     arif.sendImageWithURL(msg.to, cover)
-                elif msg.text.lower().startswith("stealcontact "):
+                elif msg.text.lower().startswith("คท "):
                     if 'MENTION' in msg.contentMetadata.keys()!= None:
                         names = re.findall(r'@(\w+)', text)
                         mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -500,7 +500,7 @@ def lineBot(op):
                             contact = arif.getContact(ls)
                             mi_d = contact.mid
                             arif.sendContact(msg.to, mi_d)
-                elif msg.text.lower().startswith("stealmid "):
+                elif msg.text.lower().startswith("ไอดี "):
                     if 'MENTION' in msg.contentMetadata.keys()!= None:
                         names = re.findall(r'@(\w+)', text)
                         mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -513,7 +513,7 @@ def lineBot(op):
                         for ls in lists:
                             ret_ += "\n{}" + ls
                         arif.sendMessage(msg.to, str(ret_))
-                elif msg.text.lower().startswith("stealname "):
+                elif msg.text.lower().startswith("ชื่อ "):
                     if 'MENTION' in msg.contentMetadata.keys()!= None:
                         names = re.findall(r'@(\w+)', text)
                         mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -525,7 +525,7 @@ def lineBot(op):
                         for ls in lists:
                             contact = arif.getContact(ls)
                             arif.sendMessage(msg.to, "[ Display Name ]\n" + contact.displayName)
-                elif msg.text.lower().startswith("stealbio "):
+                elif msg.text.lower().startswith("ตัส "):
                     if 'MENTION' in msg.contentMetadata.keys()!= None:
                         names = re.findall(r'@(\w+)', text)
                         mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -537,7 +537,7 @@ def lineBot(op):
                         for ls in lists:
                             contact = arif.getContact(ls)
                             arif.sendMessage(msg.to, "[ Status Message ]\n{}" + contact.statusMessage)
-                elif msg.text.lower().startswith("stealpicture "):
+                elif msg.text.lower().startswith("รูป "):
                     if 'MENTION' in msg.contentMetadata.keys()!= None:
                         names = re.findall(r'@(\w+)', text)
                         mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -549,7 +549,7 @@ def lineBot(op):
                         for ls in lists:
                             path = "http://dl.profile.arif.naver.jp/" + arif.getContact(ls).pictureStatus
                             arif.sendImageWithURL(msg.to, str(path))
-                elif msg.text.lower().startswith("stealvideoprofile "):
+                elif msg.text.lower().startswith("วิดีโอ "):
                     if 'MENTION' in msg.contentMetadata.keys()!= None:
                         names = re.findall(r'@(\w+)', text)
                         mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -561,7 +561,7 @@ def lineBot(op):
                         for ls in lists:
                             path = "http://dl.profile.arif.naver.jp/" + arif.getContact(ls).pictureStatus + "/vp"
                             arif.sendImageWithURL(msg.to, str(path))
-                elif msg.text.lower().startswith("stealcover "):
+                elif msg.text.lower().startswith("ปก "):
                     if line != None:
                         if 'MENTION' in msg.contentMetadata.keys()!= None:
                             names = re.findall(r'@(\w+)', text)
